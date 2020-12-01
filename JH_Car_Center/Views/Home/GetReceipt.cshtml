@@ -1,0 +1,81 @@
+﻿@model JH_Car_Center.ViewModel.CenterVM
+
+@{
+    ViewData["Title"] = "GetReceipt";
+}
+
+<div id="receipt" style="background-color: lightblue; margin-top: 50px; padding: 10px;">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>J H Car Center</h2>
+                    <h4 style="font-size: 20px;">80/5, Kakrail (Ground Fl.) Dhaka-1000</h4>
+                    <h4 style="font-size: 20px;">Sl No. @Html.DisplayFor(model => model.ReceiptNo) Date: @Html.DisplayFor(model => model.Date)</h4>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <p>Received from: J R Car Center</p>
+                    <p>as adv./parl/fut! payment against: J R Car</p>
+                    <p><span>Bill No. @Html.DisplayFor(model => model.BillNO)</span> <span>Date: @Html.DisplayFor(model => model.Date)</span></p>
+                    <p>cash / cheque No. & Bank: @Html.DisplayFor(model => model.PaymentType)</p>
+                    <p>Tk. <span style="background-color: white; padding: 5px;">@Html.DisplayFor(model => model.TotalPrice)</span></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    For <span>J H Car Center</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-2">
+                    
+                    <img src="~/img/Capture.PNG" />
+                </div>
+                <div class="col-md-10 pl-4">
+                    <h1>J H Car Center</h1>
+                    <h2 style="font-size: 20px; color: #D83687">All kinds of Motor Car Purchaser & Seller</h2>
+                    <h3 style="font-size: 17px;">80/5, Kakrail (Ground Fl.) Dhaka-1000, Phone: 9335471</h3>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <span style="text-align: left;">Sl. No. @Html.DisplayFor(model => model.ReceiptNo)</span>
+                    <span style="text-align: right !important; float: right;">Date: @Html.DisplayFor(model => model.Date)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Received with thanks from: J R Car Center</p>
+                    <p>The Sum of Taka: @Html.DisplayFor(model => model.TotalPrice)</p>
+
+                    <table style="border: none !important">
+                        <tr style="border: none !important">
+                            <td style="border: none !important; font-size: 17px">as adv./part/full payment against Bill No. @Html.DisplayFor(model => model.BillNO)</td>
+                            <td style="border: none !important; font-size: 17px">Date: @Html.DisplayFor(model => model.Date)</td>
+                        </tr>
+                    </table>
+
+                    <p style="text-align: left; float: left;">cash / cheque No. & Bank: @Html.DisplayFor(model => model.PaymentType)</p>
+                    <p style="float: right;">Date: @Html.DisplayFor(model => model.Date)</p>
+                    <p>Tk. <span style="background-color: white; padding: 5px;">@Html.DisplayFor(model => model.TotalPrice)</span></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    For <span>J H Car Center</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

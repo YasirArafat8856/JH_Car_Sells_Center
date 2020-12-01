@@ -1,0 +1,197 @@
+﻿@model JH_Car_Center.ViewModel.CenterVM
+
+@{
+    ViewData["Title"] = "Quatation";
+}
+
+
+<div class="row">
+    <div class="col-md-2">
+
+        <img src="~/img/Capture.PNG" />
+    </div>
+    <div class="col-md-7 pl-4" id="heading">
+        <h1>JH Car Center</h1>
+        <h2 style="font-size: 20px; color: #D83687">All Kind of Motor Car Purchese & Seller</h2>
+        <h3 style="font-size: 17px;">
+            eO/5, l(6karal! (Ground Floor)
+            Dhaka-1OOO, Phone : 933547t
+            Moblle : O1711-351129, OLTLL-63a3O1
+        </h3>
+    </div>
+    <div class="col-md-3">
+        <h1>Quatation</h1>
+        Date: @Html.DisplayFor(Model => Model.Date)
+    </div>
+</div>
+<div>
+    TO: @Html.DisplayFor(Model=>Model.Name)
+</div>
+
+<div>
+    <p style="font-weight:bold">
+        A/C :
+    </p>
+    <p>
+        Dear Sir,
+        We have great pleasure to offer our best price as follow in response to your valued query
+    </p>
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <td>SL. No.</td>
+            <td>Description</td>
+            <td>Price Per Unit</td>
+
+
+        </tr>
+        <tr>
+            <td>
+                <table class="table-borderless">
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            8
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table class="table-borderless">
+                    <tr>
+                        <td>
+                            Type of Vehicle : @Html.DisplayFor(model => model.TypeOfVehicle)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Chassis No : @Html.DisplayFor(model => model.ChassisNo)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Engine No : @Html.DisplayFor(model => model.EngineNO)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Manufacture Year : @Html.DisplayFor(model => model.ManufactureYear)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CC : @Html.DisplayFor(model => model.CC)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Colour : @Html.DisplayFor(model => model.Colour)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Load Capacity : @Html.DisplayFor(model => model.LoadCapacity)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Accessories : @Html.DisplayFor(model => model.Accessories)
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>@Html.DisplayFor(model => model.UnitPrice) tk</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align:left">Taka In Words :  @ViewBag.word tk only</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">
+                Terms and Conditions
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Payment :
+            </td>
+            <td>
+                100% Payment to be made in cash/Check/Pay Order/D.D. in favour of
+                our account at'the time of delivery
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Warranty :
+            </td>
+            <td>
+                We.shall provide one year after sales service without apare parts.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Delivery : 
+            </td>
+            <td>
+                Within @Html.DisplayFor(model => model.Delivery) days from the date of your final confirmation.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Validity :
+            </td>
+            <td>
+                our offer shall remain valid upto @Html.DisplayFor(model => model.Vaidity) days fro your acceptance from the
+                date of this offer.
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <div>
+        <p>
+            We hope you will find our offer
+            Thanking You
+            Your Faithfully
+            For:fHCarCenter
+        </p>
+        
+    </div>
+        
+        
+</div>
+
+

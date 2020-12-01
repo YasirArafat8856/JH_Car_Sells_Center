@@ -1,0 +1,103 @@
+﻿@model IEnumerable<JH_Car_Center.Models.Offer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>JH Car Center</h1>
+<p>
+    <a asp-controller="Home" asp-action="Create">Create New</a>
+    
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfVehicle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChassisNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineNO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManufactureYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadCapacity)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice) Tk.
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfVehicle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChassisNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EngineNO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManufactureYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoadCapacity)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                <div>
+                    <ul style="list-style:none">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Click here
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a asp-controller="Home" asp-action="EditOffer" asp-route-id="@item.ID">Edit</a></li>
+                                <li><a asp-controller="Home" asp-action="Quatation" asp-route-id="@item.ID">Details</a></li>
+                                <li><a asp-controller="Home" asp-action="DeleteOffer" asp-route-id="@item.ID">Delete</a></li>
+                                <li><a asp-controller="Home" asp-action="PrintQuataions" asp-route-id="@item.ID" target="_blank">Print Quatation</a></li>
+                                <li><a asp-controller="Home" asp-action="CreateOrder" asp-route-id="@item.ID">Order</a></li>
+                                 @*<li><a asp-controller="Home" asp-action="GetChallan" asp-route-id="@item.ID">Challan</a></li>*@
+                                 <li><a asp-controller="Home" asp-action="PrintChallan" asp-route-id="@item.ID">Print Challan</a></li>
+                                 @*<li><a asp-controller="Home" asp-action="GetReceipt" asp-route-id="@item.ID">Money Receipt</a></li>*@
+                                 <li><a asp-controller="Home" asp-action="PrintReceipt" asp-route-id="@item.ID">Print Receipt</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+            
+        </tr>
+        
+}
+    </tbody>
+</table>

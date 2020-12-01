@@ -1,0 +1,270 @@
+﻿@model JH_Car_Center.ViewModel.ChalanVM
+
+@{
+    ViewData["Title"] = "GetChallan";
+}
+<style>
+    #intable tr {
+        border: none
+    }
+</style>
+<div class="row">
+    <div class="col-md-2">
+
+        <img src="~/img/Capture.PNG" />
+    </div>
+    <div class="col-md-10 pl-4" id="heading">
+
+        <h1 @*class="col-md-12"*@>JH Car Center</h1>
+        <h2 @*class="col-md-12"*@ style="font-size: 20px; color: #D83687">All Kind of Motor Car Purchese & Seller</h2>
+        <h3 @*class="col-md-12"*@ style="font-size: 17px;">
+            eO/5, l(6karal! (Ground Floor)
+            Dhaka-1OOO, Phone : 933547t
+            Moblle : O1711-351129, OLTLL-63a3O1
+        </h3>
+    </div>
+
+</div>
+<hr />
+<div></div>
+<div class="row">
+    <div class="col-md-4">
+        Challan No : @Html.DisplayFor(Model => Model.ChallanNo)
+    </div>
+    <div class="col-md-4">
+        <h2>Challan</h2>
+        <hr />
+    </div>
+    <div class="col-md-4">
+        Date: @Html.DisplayFor(Model => Model.Date)
+    </div>
+
+</div>
+<div>
+    <p>Name : @Html.DisplayFor(Model => Model.Name)</p>
+    <p>Address : @Html.DisplayFor(Model => Model.Address)</p>
+</div>
+
+<table class="table" style="border:solid">
+    <tr style="border:solid">
+        <td>No</td>
+        <td>Description</td>
+        <td>Quantity</td>
+        <td>Remarks</td>
+    </tr>
+    <tr style="border:solid">
+        <td style="border-right:solid">1</td>
+
+        <td style="border-right:solid">
+            <table class="table table-borderless tblInn" id="intable">
+                <tr>
+                    <td>Type of Vehicle</td>
+                    <td>: @Html.DisplayFor(model => model.TypeOfVehicle)</td>
+                </tr>
+                <tr>
+                    <td>Chassis No.</td>
+                    <td>: @Html.DisplayFor(model => model.ChassisNo)</td>
+                </tr>
+                <tr>
+                    <td>Engine No.</td>
+                    <td>: @Html.DisplayFor(model => model.EngineNO)</td>
+                </tr>
+                <tr>
+                    <td>Manf. Year</td>
+                    <td>: @Html.DisplayFor(model => model.ManufactureYear)</td>
+                </tr>
+                <tr>
+                    <td>C.C</td>
+                    <td>: @Html.DisplayFor(model => model.CC)</td>
+                </tr>
+                <tr>
+                    <td>Colour</td>
+                    <td>: @Html.DisplayFor(model => model.Colour)</td>
+                </tr>
+                <tr>
+                    <td>Load Capacity</td>
+                    <td>: @Html.DisplayFor(model => model.LoadCapacity)</td>
+                </tr>
+            </table>
+        </td>
+
+        <td style="border-right:solid">@Html.DisplayFor(model => model.Quantity)</td>
+        <td>@Html.DisplayFor(model => model.Remarks)</td>
+    </tr>
+</table>
+<footer>
+    <div>
+        <p>
+            Any Claim against shortage or damage must be notified in written within 3 (Three) days of receipt of goods,
+            otherwise it will be assured that goods have been received in order and actuty / anterily as per this challan.
+        </p>
+    </div>
+    <div style="text-align:right; font-weight:bold">
+        For: JH Car Center
+    </div>
+    <div class="row">
+        <div class="col-md-6" style="text-align:left">
+            Reciver Signature
+        </div>
+        <div class="col-md-6" style="text-align:right">
+            Authorised Signature
+        </div>
+    </div>
+</footer>
+
+
+
+    <!--<div>
+
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ID)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ID)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TypeOfVehicle)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TypeOfVehicle)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ChassisNo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ChassisNo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EngineNO)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EngineNO)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ManufactureYear)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ManufactureYear)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CC)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CC)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Colour)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Colour)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.LoadCapacity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.LoadCapacity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Accessories)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Accessories)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UnitPrice)
+            </dd>-->
+            @*<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PaymentMethod)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PaymentMethod)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Delivery)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Delivery)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Vaidity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Vaidity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CustomerId)
+            </dd>*@
+            <!--<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ChallanNo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ChallanNo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Description)
+            </dd>-->
+            @*<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ReceiptNo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ReceiptNo)
+            </dd>*@
+            <!--<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Quantity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Quantity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Remarks)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Remarks)
+            </dd>-->
+            @*<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SerialNo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SerialNo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TotalPrice)
+            </dd>*@
+        <!--</dl>
+    </div>-->
+    @*<div>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        <a asp-action="Index">Back to List</a>
+    </div>*@
